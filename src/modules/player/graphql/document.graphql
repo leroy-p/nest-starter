@@ -1,0 +1,32 @@
+fragment FPlayer on Player {
+  uuid
+  name
+}
+
+query Player_findMany($findManyInput: PlayerFindManyInput!) {
+  Player_findMany(findManyInput: $findManyInput) {
+    ...FPlayer
+  }
+}
+
+query Player_findOne($findOneInput: PlayerFindOneInput!) {
+  Player_findOne(findOneInput: $findOneInput) {
+    ...FPlayer
+  }
+}
+
+mutation Player_createOne($createInput: PlayerCreateInput!) {
+  Player_createOne(createInput: $createInput) {
+    ...FPlayer
+  }
+}
+
+mutation Player_updateOne($updateInput: PlayerUpdateInput!) {
+  Player_updateOne(updateInput: $updateInput) {
+    ...FPlayer
+  }
+}
+
+mutation Player_deleteOne($deleteInput: PlayerDeleteInput!) {
+  Player_deleteOne(deleteInput: $deleteInput)
+}
