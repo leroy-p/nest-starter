@@ -2,14 +2,14 @@ export default `#graphql
 scalar Date
 
 type Mutation {
-  Player_createOne(createInput: PlayerCreateInput!): Player!
-  Player_updateOne(updateInput: PlayerUpdateInput!): Player!
-  Player_deleteOne(deleteInput: PlayerDeleteInput!): Boolean!
+  playerCreateOne(createInput: PlayerCreateInput!): Player!
+  playerUpdateOne(updateInput: PlayerUpdateInput!): Player!
+  playerDeleteOne(deleteInput: PlayerDeleteInput!): Boolean!
 }
 
 type Query {
-  Player_findOne(findOneInput: PlayerFindOneInput!): Player
-  Player_findMany(findManyInput: PlayerFindManyInput!): [Player]!
+  playerFindOne(findOneInput: PlayerFindOneInput!): Player
+  playerFindMany(findManyInput: PlayerFindManyInput!): [Player]!
 }
 
 type Player {

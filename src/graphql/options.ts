@@ -17,7 +17,7 @@ export const GraphQLOptions: TOptions = {
   uploads: {
     maxFileSize: 200_000_000, // 200 MB
   },
-  playground: env.isDev && {
+  playground: {
     settings: {
       'request.credentials': 'same-origin',
     },

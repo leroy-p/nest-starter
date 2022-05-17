@@ -19,31 +19,31 @@ export class PlayerResolver {
   ) {}
 
   @Query()
-  findOnePlayer(@Args('findOneInput') findOneInput: PlayerFindOneInput): Promise<Player | undefined> {
+  playerFindOne(@Args('findOneInput') findOneInput: PlayerFindOneInput): Promise<Player | undefined> {
     const { where } = findOneInput
 
-    return this.ps.PlayerEntity.findFirst({ where })
+    return this.ps.playerEntity.findFirst({ where })
   }
 
   @Query()
-  findManyPlayer(@Args('findManyInput') findManyInput: PlayerFindManyInput): Promise<Player[]> {
+  playerFindMany(@Args('findManyInput') findManyInput: PlayerFindManyInput): Promise<Player[]> {
     const { where } = findManyInput
 
-    return this.ps.PlayerEntity.findMany({ where })
+    return this.ps.playerEntity.findMany({ where })
   }
 
   @Mutation()
-  createOnePlayer(@Args('createInput') createInput: PlayerCreateInput): Promise<Player> {
+  playerCreateOne(@Args('createInput') createInput: PlayerCreateInput): Promise<Player> {
     return this.PlayerService.create(createInput)
   }
 
   @Mutation()
-  updateOnePlayer(@Args('updateInput') input: PlayerUpdateInput): Promise<Player> {
+  playerUpdateOne(@Args('updateInput') input: PlayerUpdateInput): Promise<Player> {
     return this.PlayerService.update(input)
   }
 
   @Mutation()
-  deleteOnePlayer(@Args('deleteInput') input: PlayerDeleteInput): Promise<boolean> {
+  playerDeleteOne(@Args('deleteInput') input: PlayerDeleteInput): Promise<boolean> {
     return this.PlayerService.delete(input)
   }
 }

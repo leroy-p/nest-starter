@@ -22,23 +22,23 @@ export enum LanguageCode {
 }
 
 export interface Mutation {
-  Player_createOne: Player;
-  Player_deleteOne: Scalars['Boolean'];
-  Player_updateOne: Player;
+  playerCreateOne: Player;
+  playerDeleteOne: Scalars['Boolean'];
+  playerUpdateOne: Player;
 }
 
 
-export type MutationPlayer_createOneArgs = {
+export type MutationplayerCreateOneArgs = {
   createInput: PlayerCreateInput;
 };
 
 
-export type MutationPlayer_deleteOneArgs = {
+export type MutationplayerDeleteOneArgs = {
   deleteInput: PlayerDeleteInput;
 };
 
 
-export type MutationPlayer_updateOneArgs = {
+export type MutationplayerUpdateOneArgs = {
   updateInput: PlayerUpdateInput;
 };
 
@@ -86,17 +86,17 @@ export interface PlayerUpdateInput {
 }
 
 export interface Query {
-  Player_findMany: Array<Maybe<Player>>;
-  Player_findOne?: Maybe<Player>;
+  playerFindMany: Array<Maybe<Player>>;
+  playerFindOne?: Maybe<Player>;
 }
 
 
-export type QueryPlayer_findManyArgs = {
+export type QueryplayerFindManyArgs = {
   findManyInput: PlayerFindManyInput;
 };
 
 
-export type QueryPlayer_findOneArgs = {
+export type QueryplayerFindOneArgs = {
   findOneInput: PlayerFindOneInput;
 };
 

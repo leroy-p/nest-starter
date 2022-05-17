@@ -3,30 +3,30 @@ fragment FPlayer on Player {
   name
 }
 
-query Player_findMany($findManyInput: PlayerFindManyInput!) {
-  Player_findMany(findManyInput: $findManyInput) {
+query PlayerFindMany($findManyInput: PlayerFindManyInput!) {
+  playerFindMany(findManyInput: $findManyInput) {
     ...FPlayer
   }
 }
 
-query Player_findOne($findOneInput: PlayerFindOneInput!) {
-  Player_findOne(findOneInput: $findOneInput) {
+query PlayerFindOne($findOneInput: PlayerFindOneInput!) {
+  playerFindOne(findOneInput: $findOneInput) {
     ...FPlayer
   }
 }
 
-mutation Player_createOne($createInput: PlayerCreateInput!) {
-  Player_createOne(createInput: $createInput) {
+mutation PlayerCreateOne($createInput: PlayerCreateInput!) {
+  playerCreateOne(createInput: $createInput) {
     ...FPlayer
   }
 }
 
-mutation Player_updateOne($updateInput: PlayerUpdateInput!) {
-  Player_updateOne(updateInput: $updateInput) {
+mutation PlayerUpdateOne($updateInput: PlayerUpdateInput!) {
+  playerUpdateOne(updateInput: $updateInput) {
     ...FPlayer
   }
 }
 
-mutation Player_deleteOne($deleteInput: PlayerDeleteInput!) {
-  Player_deleteOne(deleteInput: $deleteInput)
+mutation PlayerDeleteOne($deleteInput: PlayerDeleteInput!) {
+  playerDeleteOne(deleteInput: $deleteInput)
 }
